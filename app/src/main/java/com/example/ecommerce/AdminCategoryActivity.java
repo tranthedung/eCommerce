@@ -1,6 +1,7 @@
 package com.example.ecommerce;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.AppCompatButton;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,11 +12,34 @@ public class AdminCategoryActivity extends AppCompatActivity {
     private ImageView tShirts, sportsTShirts, femaleDresses, sweathers;
     private ImageView glasses, hatsCaps, walletsBagsPurses, shoes;
     private ImageView headPhonesHandFree, Laptops, watches, mobilePhones;
+    private AppCompatButton LogoutBtn, CheckOrderBtn;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_admin_category);
+
+        LogoutBtn = findViewById(R.id.admin_logout_btn);
+        CheckOrderBtn = findViewById(R.id.check_orders_btn);
+
+        LogoutBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AdminCategoryActivity.this, MainActivity.class);
+                intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+                startActivity(intent);
+                finish();
+            }
+        });
+
+        CheckOrderBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(AdminCategoryActivity.this, AdminNewOrdersActivity.class);
+                startActivity(intent);
+            }
+        });
+
 
 
         tShirts = (ImageView) findViewById(R.id.t_shirts);
@@ -32,6 +56,10 @@ public class AdminCategoryActivity extends AppCompatActivity {
         Laptops = (ImageView) findViewById(R.id.laptop_pc);
         watches = (ImageView) findViewById(R.id.watches);
         mobilePhones = (ImageView) findViewById(R.id.mobilephones);
+
+
+
+
 
 
         tShirts.setOnClickListener(new View.OnClickListener() {
