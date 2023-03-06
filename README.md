@@ -2,7 +2,7 @@
 App thương mại điện tử dành cho các thiết bị Android bao gồm các chức năng bên dưới :
 
 Seller : 
-- Đăng nhập, đăng kí (bao gồm tên, số điện thoại, email, mật khẩu, địa chỉ kinh doanh)  
+- Đăng nhập, đăng kí (bao gồm tên, số điện thoại, email, mật khẩu, địa chỉ kinh doanh).
 - Màn hình Home: Hiện những sản phẩm đã được upload, có thể xóa những sản phẩm lỗi hoặc sai thông tin.
 - Màn hình Add: Upload những sản phẩm theo từng loại (sản phẩm được đăng tải phải bao gồm tên, mô tả sản phẩm, giá).
 - Logout: đăng xuất khỏi tài khoản Seller.
